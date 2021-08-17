@@ -1,3 +1,9 @@
+body {
+  background-color: #283583; }
+
+body {
+  font-family: "Share Tech Mono", monospace; }
+
 .btn-pink {
   color: #283583 !important;
   border-color: #eb5e9d !important;

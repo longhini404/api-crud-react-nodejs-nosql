@@ -4,26 +4,43 @@
 <p style="color: green"><%- messages.success %></p>
 <% } %>
 
-<form action="/users/edit/<%= id %>" method="post" name="form1">
-  <table width="25%" border="0">
-    <tr>
-      <td>Name</td>
-      <td><input type="text" name="name" id="name" value="<%= name %>" /></td>
-    </tr>
-    <tr>
-      <td>Email</td>
-      <td><input type="email" name="email" value="<%= email %>" /></td>
-    </tr>
-    <tr>
-      <td>Password</td>
-      <td><input type="password" name="password" value="<%= password %>" /></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td><input type="submit" name="Submit" value="Edit" /></td>
-    </tr>
-  </table>
-  <input type="hidden" name="_method" value="PUT" />
-</form>
+<div class="container">
+  <form action="/users/edit/<%= id %>" method="post" name="form">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Nome</label>
+      <input
+        value="<%= name %>"
+        name="name"
+        type="text"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email</label>
+      <input
+        value="<%= email %>"
+        name="email"
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input
+        value="<%= password %>"
+        name="password"
+        type="password"
+        class="form-control"
+        id="exampleInputPassword1"
+      />
+    </div>
+    <input type="hidden" name="_method" value="PUT" />
+    <button type="submit" name="Submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
 
 <%- include ../layouts/footer.ejs %>

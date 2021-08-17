@@ -4,46 +4,48 @@
 <p style="color: green"><%- messages.success %></p>
 <% } %>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Email</th>
-      <th scope="col">Ação</th>
-    </tr>
-  </thead>
-  <% if (data) { %> <% data.forEach(function(user){ %>
-  <tbody>
-    <tr>
-      <td scope="row"><%= user.name %></td>
-      <td scope="row"><%= user.email %></td>
-      <td scope="row">
-        <div class="float-start">
-          <a
-            href="/users/edit/<%= user._id %>"
-            type="button"
-            class="btn btn-warning"
-            >Editar
-          </a>
-          &nbsp;
-          <form
-            method="post"
-            action="/users/delete/<%= user._id %>"
-            style="float: right"
-          >
-            <input
-              type="submit"
-              name="delete"
-              class="btn btn-danger"
-              value="Delete"
-            />
-            <input type="hidden" name="_method" value="DELETE" />
-          </form>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-  <% }) %> <% } %>
-</table>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Ação</th>
+      </tr>
+    </thead>
+    <% if (data) { %> <% data.forEach(function(user){ %>
+    <tbody>
+      <tr>
+        <td scope="row"><%= user.name %></td>
+        <td scope="row"><%= user.email %></td>
+        <td scope="row">
+          <div class="float-start">
+            <a
+              href="/users/edit/<%= user._id %>"
+              type="button"
+              class="btn btn-warning"
+              >Editar
+            </a>
+            &nbsp;
+            <form
+              method="post"
+              action="/users/delete/<%= user._id %>"
+              style="float: right"
+            >
+              <input
+                type="submit"
+                name="delete"
+                class="btn btn-danger"
+                value="Delete"
+              />
+              <input type="hidden" name="_method" value="DELETE" />
+            </form>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+    <% }) %> <% } %>
+  </table>
+</div>
 
 <%- include ../layouts/footer.ejs %>

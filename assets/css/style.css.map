@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGE,QAAE;EACA,eAAe,EAAE,IAAI;;ACFzB,QAAS;EACP,gBAAgB,ECHX,OAAO;;ADMd,QAAS;EACP,gBAAgB,ECNX,OAAO;;ADSd,SAAU;EACR,gBAAgB,ECTV,OAAO;;ACDf,UAAW;EACT,KAAK,EDFA,OAAO;;ACKd,UAAW;EACT,KAAK,EDLA,OAAO;;ACQd,WAAY;EACV,KAAK,EDRC,OAAO",
+"sources": ["../../sass/layout/_footer.scss","../../sass/themes/_backgrounds.scss","../../sass/_variables.scss","../../sass/themes/_colors.scss"],
+"names": [],
+"file": "style.css"
+}

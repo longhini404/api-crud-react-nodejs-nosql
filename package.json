@@ -27,5 +27,8 @@
     "method-override": "^2.3.10",
     "mongodb": "^3.6.2",
     "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   }
 }

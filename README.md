@@ -1,16 +1,20 @@
-# MongoDB
+# Start MongoDB
 
-```
-sudo service mongod start
-```
-
-# Deploy
+## Deploy
 
 ```
 npm install
+
 ```
 
-# Localhost
+## Sass
+
+```
+sass --watch sass:assets/css
+
+```
+
+## Localhost
 
 ```
 npm start

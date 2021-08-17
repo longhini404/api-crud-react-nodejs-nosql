@@ -40,9 +40,9 @@ app.get("/add", function (req, res, next) {
 
 // ADD NEW USER POST ACTION
 app.post("/add", function (req, res, next) {
-  req.assert("name", "Name is required").notEmpty(); //Validate name
-  req.assert("email", "Email is required").notEmpty(); //Validate email
-  req.assert("password", "Password is required").notEmpty(); //Validate password
+  req.assert("name", "Nome é obrigatório").notEmpty(); //Validate name
+  req.assert("email", "Email é obrigatório").notEmpty(); //Validate email
+  req.assert("password", "Senha é obrigatório").notEmpty(); //Validate password
 
   var errors = req.validationErrors();
 
@@ -65,7 +65,7 @@ app.post("/add", function (req, res, next) {
           password: user.password,
         });
       } else {
-        req.flash("success", "Data added successfully!");
+        req.flash("success", "Dados adicionados com sucesso!");
 
         // redirect to user list
         res.redirect("/users");
@@ -122,9 +122,9 @@ app.get("/edit/(:id)", function (req, res, next) {
 
 // EDIT USER POST ACTION
 app.put("/edit/(:id)", function (req, res, next) {
-  req.assert("name", "Name is required").notEmpty(); //Validate name
-  req.assert("email", "Email is required").notEmpty(); //Validate email
-  req.assert("password", "Password is required").notEmpty(); //Validate password
+  req.assert("name", "Nome é obrigatório").notEmpty(); //Validate name
+  req.assert("email", "Email é obrigatório").notEmpty(); //Validate email
+  req.assert("password", "Senha é obrigatório").notEmpty(); //Validate password
 
   var errors = req.validationErrors();
 
@@ -151,7 +151,7 @@ app.put("/edit/(:id)", function (req, res, next) {
             password: req.body.password,
           });
         } else {
-          req.flash("success", "Data updated successfully!");
+          req.flash("success", "Dados atualizados com sucesso!");
 
           res.redirect("/users");
         }
@@ -187,7 +187,7 @@ app.delete("/delete/(:id)", function (req, res, next) {
       // redirect to users list
       res.redirect("/users");
     } else {
-      req.flash("success", "User deleted successfully! id = " + req.params.id);
+      req.flash("success", "Usuário excluído com sucesso!");
       // redirect to users list
       res.redirect("/users");
     }

@@ -3,7 +3,7 @@
 <div class="container">
   <form action="/users/edit/<%= id %>" method="post" name="form">
     <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Nome</label>
+      <label class="form-label">Nome</label>
       <input
         value="<%= name %>"
         name="name"
@@ -14,7 +14,7 @@
       />
     </div>
     <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email</label>
+      <label class="form-label">Email</label>
       <input
         value="<%= email %>"
         name="email"
@@ -25,7 +25,7 @@
       />
     </div>
     <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <label class="form-label">Password</label>
       <input
         value="<%= password %>"
         name="password"
@@ -35,7 +35,11 @@
       />
     </div>
     <input type="hidden" name="_method" value="PUT" />
-    <button type="submit" name="Submit" class="btn btn-primary">Submit</button>
+    <div class="d-grid">
+      <button type="submit" name="Submit" class="btn btn-lg btn-green mt-2">
+        Editar
+      </button>
+    </div>
   </form>
 </div>
 

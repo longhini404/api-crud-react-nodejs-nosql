@@ -3,10 +3,12 @@
 @import "base/bootstrap";
 @import "base/fonts";
 
-@import "content/tables";
+@import "components/buttons";
+@import "components/forms";
+@import "components/tables";
 
-@import "layout/footer";
 @import "layout/header";
+@import "layout/footer";
 
 @import "themes/backgrounds";
 @import "themes/colors";

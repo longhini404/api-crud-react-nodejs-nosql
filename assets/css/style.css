@@ -1,5 +1,36 @@
+.btn-pink {
+  color: #283583 !important;
+  border-color: #eb5e9d !important;
+  background-color: #eb5e9d !important; }
+
+.btn-green {
+  color: #283583 !important;
+  border-color: #98c222 !important;
+  background-color: #98c222 !important; }
+
+.form-label {
+  color: #eb5e9d !important; }
+
+.form-control {
+  color: #eb5e9d !important;
+  border: 2px solid #eb5e9d !important;
+  background-color: #283583 !important; }
+
+table,
+th,
+td {
+  color: #eb5e9d !important;
+  border: 2px solid #eb5e9d !important; }
+
+header {
+  display: flex;
+  justify-content: center; }
+
 footer a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #eb5e9d !important; }
+  footer a:hover {
+    color: #98c222 !important; }
 
 .bg-blue {
   background-color: #283583; }

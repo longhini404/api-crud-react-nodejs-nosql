@@ -1,0 +1,11 @@
+@import "../variables";
+
+.form-label {
+  color: $pink !important;
+}
+
+.form-control {
+  color: $pink !important;
+  border: 2px solid $pink !important;
+  background-color: $blue !important;
+}

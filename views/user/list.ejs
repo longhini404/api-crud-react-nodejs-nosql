@@ -6,6 +6,12 @@
   <% } %> <% if (messages.success) { %>
   <div class="alert alert-success" role="alert"><%- messages.success %></div>
   <% } %>
+
+  <div class="d-grid">
+    <a href="/users/add" class="btn btn-lg btn-green mb-4" type="button">
+      Adicionar
+    </a>
+  </div>
   <table class="table">
     <thead>
       <tr>
@@ -24,7 +30,7 @@
             <a
               href="/users/edit/<%= user._id %>"
               type="button"
-              class="btn btn-warning"
+              class="btn btn-green"
               >Editar
             </a>
             &nbsp;
@@ -36,7 +42,7 @@
               <input
                 type="submit"
                 name="delete"
-                class="btn btn-danger"
+                class="btn btn-green"
                 value="Delete"
               />
               <input type="hidden" name="_method" value="DELETE" />

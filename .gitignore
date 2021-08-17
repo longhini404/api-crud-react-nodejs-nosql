@@ -1,4 +1,5 @@
 node_modules
-vendor
-.idea
+.sass-cache
 .DS_Store
+.idea
+vendor

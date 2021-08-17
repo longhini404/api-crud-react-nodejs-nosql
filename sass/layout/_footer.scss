@@ -1,0 +1,11 @@
+@import "../variables";
+
+footer {
+  border-top: 1px solid $green;
+  i {
+    color: gray;
+    &:hover {
+      color: $green;
+    }
+  }
+}

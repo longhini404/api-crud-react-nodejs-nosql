@@ -1,0 +1,11 @@
+@import "../variables";
+
+.card {
+  border-radius: 1rem;
+  .card-header {
+    color: white;
+    font-weight: bold;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+}

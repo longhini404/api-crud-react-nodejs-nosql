@@ -1,6 +1,6 @@
+var ObjectId = require("mongodb").ObjectId;
 var express = require("express");
 var app = express();
-var ObjectId = require("mongodb").ObjectId;
 
 // SHOW LIST OF USERS
 app.get("/", function (req, res, next) {
@@ -56,7 +56,6 @@ app.post("/add", function (req, res, next) {
     req.db.collection("users").insert(user, function (err, result) {
       if (err) {
         req.flash("error", err);
-
         // render to views/user/add.ejs
         res.render("user/add", {
           title: "Add New User",
@@ -66,7 +65,6 @@ app.post("/add", function (req, res, next) {
         });
       } else {
         req.flash("success", "Dados adicionados com sucesso!");
-
         // redirect to user list
         res.redirect("/users");
       }
@@ -79,10 +77,6 @@ app.post("/add", function (req, res, next) {
     });
     req.flash("error", error_msg);
 
-    /**
-     * Using req.body.name
-     * because req.param('name') is deprecated
-     */
     res.render("user/add", {
       title: "Add New User",
       name: req.body.name,
@@ -100,7 +94,6 @@ app.get("/edit/(:id)", function (req, res, next) {
     .find({ _id: o_id })
     .toArray(function (err, result) {
       if (err) return console.log(err);
-
       // if user not found
       if (!result) {
         req.flash("error", "User not found with id = " + req.params.id);
@@ -141,7 +134,6 @@ app.put("/edit/(:id)", function (req, res, next) {
       .update({ _id: o_id }, user, function (err, result) {
         if (err) {
           req.flash("error", err);
-
           // render to views/user/edit.ejs
           res.render("user/edit", {
             title: "Edit User",
@@ -164,10 +156,6 @@ app.put("/edit/(:id)", function (req, res, next) {
     });
     req.flash("error", error_msg);
 
-    /**
-     * Using req.body.name
-     * because req.param('name') is deprecated
-     */
     res.render("user/edit", {
       title: "Edit User",
       id: req.params.id,
@@ -187,7 +175,7 @@ app.delete("/delete/(:id)", function (req, res, next) {
       // redirect to users list
       res.redirect("/users");
     } else {
-      req.flash("success", "Usuário excluído com sucesso!");
+      req.flash("success", "Dado excluído com sucesso!");
       // redirect to users list
       res.redirect("/users");
     }

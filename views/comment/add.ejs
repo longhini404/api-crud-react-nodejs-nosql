@@ -1,0 +1,35 @@
+<%- include ../layouts/header.ejs %> <%- include ../components/alerts.ejs %>
+
+<div class="container">
+  <form action="/comments/add" method="post" name="form">
+    <div class="mb-3">
+      <label class="form-label">ID Class</label>
+      <select name="id_class" class="form-control">
+        <option value="1">1</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Comment</label>
+      <input
+        value="<%- comment %>"
+        class="form-control"
+        name="comment"
+        type="text"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        value="<%- new Date().toLocaleString() %>"
+        name="date_created"
+        required
+        hidden
+      />
+    </div>
+    <div class="d-grid">
+      <button type="submit" class="btn btn-lg btn-green mt-2">Adicionar</button>
+    </div>
+  </form>
+</div>
+
+<%- include ../layouts/footer.ejs %>

@@ -1,0 +1,79 @@
+<%- include ../layouts/header.ejs %> <%- include ../components/alerts.ejs %>
+
+<div class="container">
+  <form action="/classes/edit/<%- id %>" method="post" name="form">
+    <div class="mb-3">
+      <label class="form-label">Name</label>
+      <input
+        value="<%- name %>"
+        name="name"
+        type="text"
+        class="form-control"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Description</label>
+      <textarea
+        name="description"
+        type="text"
+        class="form-control"
+        rows="3"
+        required
+      >
+<%- description %></textarea
+      >
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Video</label>
+      <input
+        value="<%- video %>"
+        name="video"
+        type="text"
+        class="form-control"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Data Init</label>
+      <input
+        placeholder="dd/mm/aaaa --:--"
+        value="<%- data_init %>"
+        type="datetime-local"
+        class="form-control"
+        name="data_init"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Data End</label>
+      <input
+        placeholder="dd/mm/aaaa --:--"
+        value="<%- data_end %>"
+        type="datetime-local"
+        class="form-control"
+        name="data_end"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <input value="<%- date_created %>" name="date_created" required hidden />
+    </div>
+    <div class="mb-3">
+      <input
+        value="<%- new Date().toLocaleString() %>"
+        name="date_updated"
+        required
+        hidden
+      />
+    </div>
+    <input type="hidden" name="_method" value="PUT" />
+    <div class="d-grid">
+      <button type="submit" name="Submit" class="btn btn-lg btn-green mt-2">
+        Editar
+      </button>
+    </div>
+  </form>
+</div>
+
+<%- include ../layouts/footer.ejs %>

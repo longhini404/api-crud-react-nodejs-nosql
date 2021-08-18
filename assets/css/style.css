@@ -21,6 +21,8 @@ body {
   color: #eb5e9d !important;
   border: 2px solid #eb5e9d !important;
   background-color: #283583 !important; }
+  .form-control::placeholder {
+    color: #eb5e9d !important; }
 
 table,
 th,

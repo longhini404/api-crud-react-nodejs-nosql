@@ -2,35 +2,31 @@
 
 <div class="container">
   <div class="d-grid">
-    <a href="/users/add" class="btn btn-lg btn-green mb-4" type="button">
+    <a href="/comments/add" class="btn btn-lg btn-green mb-4" type="button">
       Adicionar
     </a>
   </div>
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Email</th>
-        <th scope="col" width="200">Ação</th>
+        <th scope="col">ID Class</th>
+        <th scope="col">Comment</th>
+        <th scope="col">Date Created</th>
+        <th scope="col" width="100">Ação</th>
       </tr>
     </thead>
-    <% if (data) { %> <% data.forEach(function(user){ %>
+    <% if (data) { %> <% data.forEach(function(comment){ %>
     <tbody>
       <tr>
-        <td scope="row"><%- user.name %></td>
-        <td scope="row"><%- user.email %></td>
+        <td scope="row"><%- comment.id_class %></td>
+        <td scope="row"><%- comment.comment %></td>
+        <td scope="row"><%- comment.date_created %></td>
         <td scope="row">
           <div class="float-start">
-            <a
-              href="/users/edit/<%- user._id %>"
-              type="button"
-              class="btn btn-green"
-              >Editar
-            </a>
             &nbsp;
             <form
               method="post"
-              action="/users/delete/<%- user._id %>"
+              action="/comments/delete/<%- comment._id %>"
               style="float: right"
             >
               <input

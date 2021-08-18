@@ -2,7 +2,7 @@
 
 <div class="container">
   <div class="d-grid">
-    <a href="/users/add" class="btn btn-lg btn-green mb-4" type="button">
+    <a href="/classes/add" class="btn btn-lg btn-green mb-4" type="button">
       Adicionar
     </a>
   </div>
@@ -10,19 +10,33 @@
     <thead>
       <tr>
         <th scope="col">Name</th>
-        <th scope="col">Email</th>
+        <th scope="col">Description</th>
+        <th scope="col">Video</th>
+        <th scope="col">Data Init</th>
+        <th scope="col">Data End</th>
+        <th scope="col">Date Created</th>
+        <th scope="col">Date Updated</th>
+        <th scope="col">Total Comments</th>
         <th scope="col" width="200">Ação</th>
       </tr>
     </thead>
-    <% if (data) { %> <% data.forEach(function(user){ %>
+    <% if (data) { %> <% data.forEach(function(classe){ %>
     <tbody>
       <tr>
-        <td scope="row"><%- user.name %></td>
-        <td scope="row"><%- user.email %></td>
+        <td scope="row"><%- classe.name %></td>
+        <td scope="row"><%- classe.description %></td>
+        <td scope="row">
+          <a href="<%- classe.video %>" target="_blank">Link</a>
+        </td>
+        <td scope="row"><%- classe.data_init %></td>
+        <td scope="row"><%- classe.data_end %></td>
+        <td scope="row"><%- classe.date_created %></td>
+        <td scope="row"><%- classe.date_updated %></td>
+        <td scope="row"><%- classe.total_comments %></td>
         <td scope="row">
           <div class="float-start">
             <a
-              href="/users/edit/<%- user._id %>"
+              href="/classes/edit/<%- classe._id %>"
               type="button"
               class="btn btn-green"
               >Editar
@@ -30,7 +44,7 @@
             &nbsp;
             <form
               method="post"
-              action="/users/delete/<%- user._id %>"
+              action="/classes/delete/<%- classe._id %>"
               style="float: right"
             >
               <input

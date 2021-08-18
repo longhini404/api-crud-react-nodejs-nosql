@@ -8,4 +8,7 @@
   color: $pink !important;
   border: 2px solid $pink !important;
   background-color: $blue !important;
+  &::placeholder {
+    color: $pink !important;
+  }
 }

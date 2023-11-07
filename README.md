@@ -11,7 +11,7 @@
 sudo systemctl start mongod
 ```
 
-# Deploy
+# Setup
 
 ```
 npm install
